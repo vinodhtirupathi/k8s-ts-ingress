@@ -89,7 +89,6 @@ spec:
             exec:
               command:
               - /bin/sh
-              - -c
               - /bin/rm -f /run/ts-alive; sleep 20
 
         # The probes use TS's healthchecks plugin, so this will only return
