@@ -84,12 +84,7 @@ spec:
 
         # Ensure TS's healthcheck fails before it stops serving requests, so it
         # can be removed from any load balancer node list.
-        lifecycle:
-          preStop:
-            exec:
-              command:
-              - /bin/sh
-              - /bin/rm -f /run/ts-alive; sleep 20
+     
 
         # The probes use TS's healthchecks plugin, so this will only return
         # successfully when TS is running.  It does not currently check the
